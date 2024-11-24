@@ -124,7 +124,142 @@ main.user {
     flex: 1;
     padding: 50px 150px;
     justify-content: center;
-    /*background: url('/styles/images/PrizmDocCloud-Result-ContentConversion-vcx.svg');*/
+}
+
+.button-list {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.open-btn {
+    padding: 15px 15px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #005551;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.open-btn:hover {
+    color: #005551;
+    background-color: #FFFFFF;
+    border: 1px solid #005551;
+}
+
+.open-btn a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.open-btn:hover a {
+    text-decoration: none;
+    color: #005551;
+}
+
+.open-btn svg{
+    fill: #FFFFFF;
+}
+
+.open-btn:hover svg{
+    fill: #005551;
+}
+
+.popup-toggle {
+    display: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+#popup-toggle1:checked ~ #popup1,
+#popup-toggle2:checked ~ #popup2,
+#popup-toggle3:checked ~ #popup3,
+#popup-toggle4:checked ~ #popup4,
+#popup-toggle5:checked ~ #popup5 {
+    display: block;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-form label {
+    margin-bottom: 5px;
+}
+
+.user-form input {
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+.user-form textarea {
+    margin-bottom: 20px;
+    max-height: 100%;
+    max-width: 100%;
+    border: 1px solid #CCCCCC;
+}
+
+.user-form button {
+    padding: 10px;
+    background-color: #005551;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-form button:hover {
+    background-color: #FFFFFF;
+    color: #005551;
+    border: 1px solid #005551;
+}
+
+.user-form select {
+    padding: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
 }
 
 /* main authorization ------------------------ */
@@ -324,3 +459,20 @@ span#symbol-required {
     display: none;
     pointer-events: none;
 }
+
+.highlight {
+    fill: gold;
+    stroke: red;
+    stroke-width: 2;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        fill: gold;
+    }
+    100% {
+        fill: orange;
+    }
+}
+
