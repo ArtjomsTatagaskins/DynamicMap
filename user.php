@@ -13,9 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="script.js" defer></script>
     <div class="wrapper">
         <?php  require_once "blocks/header.php"; ?>
-        <main class="user"></main>
+        <main class="user">
+            <div id="map-container"></div>
+            <div class="tooltip">Tooltip</div>
+        </main>
         <?php  require_once "blocks/footer.php"; ?>
     </div>
 </body>

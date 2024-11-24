@@ -124,6 +124,7 @@ main.user {
     flex: 1;
     padding: 50px 150px;
     justify-content: center;
+    /*background: url('/styles/images/PrizmDocCloud-Result-ContentConversion-vcx.svg');*/
 }
 
 /* main authorization ------------------------ */
@@ -293,4 +294,33 @@ span#symbol-required {
     margin: 5px 0;
     font-size: 14px;
     min-width: 350px;
+}
+
+/*map -------------------- */
+
+.room {
+    transform-origin: center;
+    transform-box: fill-box;
+    outline: 5px solid transparent;
+    fill: lightgray;
+    stroke: black;
+    stroke-width: 1;
+    transition: all 0.3s ease;
+}
+
+.room:hover {
+    transform: scale(1.2);
+    fill: gold;
+    stroke-width: 2;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+    pointer-events: none;
 }
