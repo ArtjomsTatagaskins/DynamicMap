@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const mapContainer = document.getElementById("map-container");
     const viewMapButton = document.getElementById("view-map");
+    const tooltip = document.querySelector('.tooltip');
 
     const loadMap = () => {
         fetch('/styles/images/finalv2building.svg')
@@ -12,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(svgContent => {
                 mapContainer.innerHTML = svgContent;
-                // console.log("SVG loaded successfully");
                 setupTooltip();
             })
             .catch(err => console.error('Kļūda ielādējot SVG:', err));
@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const setupTooltip = () => {
         const roomElements = document.querySelectorAll('.room');
-        const tooltip = document.querySelector('.tooltip');
-
         roomElements.forEach(room => {
             room.addEventListener('mousemove', (e) => {
                 tooltip.style.left = `${e.pageX + 10}px`;
@@ -39,15 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     loadMap();
 
     viewMapButton.addEventListener("click", () => {
-
         const selectedDate = document.getElementById("selected-date").value;
 
         if (!selectedDate) {
             alert("Lūdzu, izvēlieties datumu.");
             return;
         }
-
-       // console.log("Selected date:", selectedDate);
 
         fetch(`/lib/schedule.php?selected-date=${encodeURIComponent(selectedDate)}`)
             .then(response => {
@@ -57,11 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then(rooms => {
-                // console.log("Rooms from server:", rooms);
-
                 if (rooms.error) {
-                    // console.error("Server error:", rooms.error);
-                    alert("Kļūda, ielādējot datus");
+                    alert(rooms.error);
                     return;
                 }
                 if (rooms.message) {
@@ -72,11 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const roomElements = document.querySelectorAll('.room');
                 roomElements.forEach(room => {
                     const roomId = room.getAttribute('id');
-                    if (rooms.includes(roomId)) {
+                    if (roomId in rooms) {
                         room.classList.add('highlight');
-                        // console.log(`Room ${roomId} highlighted`);
+                        room.setAttribute('aria-label', `Telpa: ${roomId}, Priekšmets: ${rooms[roomId]}`);
                     } else {
                         room.classList.remove('highlight');
+                        room.setAttribute('aria-label', `Telpa: ${roomId}`);
                     }
                 });
             })
