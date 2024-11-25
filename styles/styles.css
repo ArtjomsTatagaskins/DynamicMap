@@ -64,7 +64,7 @@ button.logout-button:hover {
 /*   main mainpage ------------------------------- */
 
 main.welcome {
-    flex: 1;
+    /*flex: 1;*/
     display: flex;
     flex-direction: row;
     margin: 30px auto;
@@ -212,10 +212,7 @@ main.user {
 }
 
 #popup-toggle1:checked ~ #popup1,
-#popup-toggle2:checked ~ #popup2,
-#popup-toggle3:checked ~ #popup3,
-#popup-toggle4:checked ~ #popup4,
-#popup-toggle5:checked ~ #popup5 {
+#popup-toggle2:checked ~ #popup2 {
     display: block;
 }
 
@@ -388,6 +385,11 @@ span#symbol-required {
 
 /* footer ------------------------ */
 
+body.welcome-page .contacts {
+    position: absolute;
+    bottom: 0;
+}
+
 .contacts {
     display: flex;
     justify-content: space-between;
@@ -460,19 +462,10 @@ span#symbol-required {
     pointer-events: none;
 }
 
-.highlight {
+.room.highlight {
+    transform: scale(1.2);
     fill: gold;
-    stroke: red;
     stroke-width: 2;
-    animation: glow 1s infinite alternate;
 }
 
-@keyframes glow {
-    0% {
-        fill: gold;
-    }
-    100% {
-        fill: orange;
-    }
-}
 

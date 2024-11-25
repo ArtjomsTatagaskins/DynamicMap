@@ -11,11 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
-<body>
+<body class="welcome-page">
 <div class="wrapper">
-    <?php  require_once "blocks/header.php"; ?>
+    <?php require_once "blocks/header.php"; ?>
 
     <main class="welcome">
         <div class="image-container">
@@ -28,7 +27,6 @@
     </main>
 
     <?php require_once "blocks/footer.php"; ?>
-
 </div>
 </body>
 </html>

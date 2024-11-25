@@ -572,14 +572,14 @@
 <path d="m1009.1 1118.9l29.5 29.6" />
 </g>
 <g clip-path="url(#clipId0)" fill="none" stroke="rgb(9,199,246)" stroke-width="0.75" >
-<path aria-label="Room №101" class="room" id="n101" d="m580.1 1054.7l106 0l0 119.6l-106 0l0 -119.6" />
-<path aria-label="Room №102" class="room" id="n102" d="m690.0 1054.7l86.9 0l0 119.6l-86.9 0l0 -119.6" />
-<path aria-label="Room №103" class="room" id="n103" d="m580.1 1215.3l106 0l0 106.1l-106 0l0 -106.1" />
-<path aria-label="Room №104" class="room" id="n104" d="m1135.5 1500.0l-119.5 0l0 -86.7l119.5 0l0 86.7" />
-<path aria-label="Room №105" class="room" id="n105" d="m1135.5 1610.2l-119.5 0l0 -106.1l119.5 0l0 106.1" />
-<path aria-label="Room №106" class="room" id="n106" d="m974.9 1610.2l-106 0l0 -106.1l106 0l0 106.1" />
-<path aria-label="Room №107" class="room" id="n107" d="m868.9 1443.6l72.4 0l0 56.4l-72.4 0l0 -56.4" />
-<path aria-label="Room №108" class="room" id="n108" d="m746.7 1321.4l-56.7 0l0 -70.6l56.7 0l0 70.6" />
-<path aria-label="Room №109" class="room" id="n109" d="m746.7 1245.0l-56.7 0l0 -33.6l56.7 0l0 33.6" />
+<path aria-label="Room №101" class="room" id="101" d="m580.1 1054.7l106 0l0 119.6l-106 0l0 -119.6" />
+<path aria-label="Room №102" class="room" id="102" d="m690.0 1054.7l86.9 0l0 119.6l-86.9 0l0 -119.6" />
+<path aria-label="Room №103" class="room" id="103" d="m580.1 1215.3l106 0l0 106.1l-106 0l0 -106.1" />
+<path aria-label="Room №104" class="room" id="104" d="m1135.5 1500.0l-119.5 0l0 -86.7l119.5 0l0 86.7" />
+<path aria-label="Room №105" class="room" id="105" d="m1135.5 1610.2l-119.5 0l0 -106.1l119.5 0l0 106.1" />
+<path aria-label="Room №106" class="room" id="106" d="m974.9 1610.2l-106 0l0 -106.1l106 0l0 106.1" />
+<path aria-label="Room №107" class="room" id="107" d="m868.9 1443.6l72.4 0l0 56.4l-72.4 0l0 -56.4" />
+<path aria-label="Room №108" class="room" id="108" d="m746.7 1321.4l-56.7 0l0 -70.6l56.7 0l0 70.6" />
+<path aria-label="Room №109" class="room" id="109" d="m746.7 1245.0l-56.7 0l0 -33.6l56.7 0l0 33.6" />
 </g>
 </svg>

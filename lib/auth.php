@@ -14,7 +14,7 @@ try {
     $user = $query->fetch(PDO::FETCH_ASSOC);
 
     if (!$user || !password_verify($password, $user['password'])) {
-        echo "No such user or incorrect password";
+        echo "Nav tāda lietotāja vai nepareiza parole";
     } else {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['email'] = $user['email'];
@@ -26,5 +26,5 @@ try {
     }
 
 } catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    echo "Datubāzes savienojuma kļūda: " . $e->getMessage();
 }
