@@ -1,9 +1,11 @@
 <?php
+session_start();
+
 require "db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        $sql = "INSERT INTO schedule (course_id, date, start_time, end_time, room) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO schedule (course_id, date, start_time, end_time, room, user_id) VALUES (?, ?, ?, ?, ?, ?)";
         $query = $pdo->prepare($sql);
         $query->execute([
             $_POST['course-id'],
@@ -11,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST['events-starttime'],
             $_POST['events-endtime'],
             $_POST['events-room'],
+            $_SESSION['user_id'],
         ]);
 
         header('Location: /user.php');

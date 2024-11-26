@@ -1,5 +1,6 @@
 <?php
 require "db.php";
+session_start();
 
 if (isset($_GET['selected-date'])) {
     $selectedDate = $_GET['selected-date'];
@@ -8,10 +9,10 @@ if (isset($_GET['selected-date'])) {
             SELECT s.room, c.course_name
             FROM schedule s
             JOIN courses c ON s.course_id = c.course_id
-            WHERE s.date = ?
+            WHERE s.date = ? AND s.user_id = ?
         ";
         $query = $pdo->prepare($sql);
-        $query->execute([$selectedDate]);
+        $query->execute([$selectedDate, $_SESSION['user_id']]);
 
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
